@@ -1,0 +1,7 @@
+For this part of the lab, I hooked up the glider to a speaker in order to get a driven oscillation.
+
+I took measurements for driving frequencies from 0.75Hz up to 0.82Hz. I chose this range based on the value of sqrt(k/m) I calculated earlier in the lab.
+
+The data supplied here was taken using the same cart as in problems 4 and 5.
+
+

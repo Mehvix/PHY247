@@ -1,0 +1,30 @@
+
+Question 1 Data:
+
+Note: When I say "width" I refer to measurements along the checkerboard's x-axis. Length refers to the checkerboard y-axis.
+Some Pictures of what the measuring process with the calipers looked like can be found in the "checkerboard_pics" folder. Here's a nice video of how to read a caliper. 
+
+https://www.youtube.com/watch?v=vkPlzmalvN4
+
+Try to see if you can read off some lengths from my pictures of the calipers. they should all be in the neighborhood of 2.3cm. 
+
+
+Here's a table with width measurements for the checkerboard. Units are in cm. I measured white squares on even entries and black on odd ones. Notice how the white measurements tend to be larger? Measurements done with caliper
+ 
+2.275, 2.350, 2.285, 2.320, 2.230, 2.295, 2.280, 2.300, 2.290, 2.350
+
+I measured the width of the checkerboard using my printed latex ruler and got 23.3cm.
+
+I measured the length of the printed checkerboard using the printed latex ruler and got 16.1cm
+
+Some notes on the checkerboard pictures:
+
+These we're taken using my samsung galaxy phone. I used an app where I disabled autofocus (I think). The matlab image processing package you use should be able to spit out information about the camera settings. 
+
+Some notes on the pictures of the checkerboard with pennies:
+
+Some of the pictures include extraneous stuff like John's feet, the hardwood table, etc. These pictures and be either cropped or excluded when it comes time to process them in matlab.
+
+When it comes time to measure the distance between the pennies, you may run into trouble. This is because the picture is a bit too bright. You can get it to work if you fiddle around with some of the settings in the matlab code, though. 
+
+

@@ -1,0 +1,164 @@
+%======================================%
+%   LaTeX 2-column Template
+%   Author: Gregory J. Loges
+%   Last Update: 2019/10/16
+%======================================%
+
+% The "preamble" is where you set up your document, import necessary packages and set options for the typesetting
+
+% Begin by choosing document type (and default font size)
+\documentclass[11pt]{article}
+
+% The geometry package allows you to resize margins (among other things)
+\usepackage[margin=1in]{geometry}
+
+
+\usepackage{amsmath}    % For math stuff
+\usepackage{amssymb}    % For more math stuff
+\usepackage{siunitx}    % For writing quantities with units
+
+\usepackage{multicol}   % For having multiple columns
+\usepackage{wrapfig}    % For having text wrap around tables and figures. This is required in multi-column layouts
+
+\usepackage{graphicx}   % For handling images
+\usepackage[colorlinks=true]{hyperref}      % For hyperlinks
+\usepackage{titlesec}   % For fine-tuning (sub)section headers
+
+\usepackage{lipsum}     % For generating gibberish Latin text
+\usepackage{cleveref}   % https://tex.stackexchange.com/questions/62611/how-to-make-ref-references-include-the-word-figure
+\usepackage{enumitem}   % https://stackoverflow.com/questions/4968557/latex-very-compact-itemize#4974583
+
+
+
+% Fine-tune the appearance of (sub)section headers
+% Try uncommenting and adjusting the following (see http://www.ctex.org/documents/packages/layout/titlesec.pdf for documentation):
+
+% Numbering style
+% \renewcommand{\thesection}{\Roman{section}}
+% \renewcommand{\thesubsection}{\Roman{section}.\roman{subsection}}
+% \renewcommand{\thesubsubsection}{\Roman{section}.\roman{subsection}.\alph{subsubsection}}
+
+% Font size/style
+% Example 1:
+% \titleformat{\section}{\scshape}{\thesection}{1em}{}
+% \titleformat{\subsection}{\scshape}{\thesubsection}{1em}{}
+% \titleformat{\subsubsection}{\scshape}{\thesubsubsection}{1em}{}
+
+% Example 2:
+% \titleformat{\section}{\tiny\bf}{\thesection}{1em}{}
+% \titleformat{\subsection}{\tiny\bf}{\thesubsection}{1em}{}
+% \titleformat{\subsubsection}{\tiny\bf}{\thesubsubsection}{1em}{}
+
+
+% Set title parameters
+\title{Week 3: Acceleration In Free Fall Lab}
+\author{Max L.~Vogel}
+\date{\today}
+
+
+% Actual document content begins here!
+\begin{document}
+
+% Make the title using title, author and date from above
+\maketitle
+
+% Abstract, appearing directly below title
+\begin{abstract}
+    This formal lab report outlines the process used to estimate the value of gravity with a spark generator, the resulting values calculated alongside their respective errors, and the potential flaws \& sources of error in the experiment. Because we found a value of $9.82\si{m.s^{-2}}$ with an standard error of $0.02 \si{m.s^{-2}}$, it is plausible that our  hypothesized value of $9.81 \si{m.s^{-2}}$ is a reasonable estimate for the force by gravity at Chamberlin Hall.
+\end{abstract}
+
+\bigskip    % Some space
+
+% Begin using two columns for text
+\begin{multicols}{2}
+
+\section{Introduction}
+Our goal is to estimate $g$, the acceleration of gravity, at \href{https://en.wikipedia.org/wiki/Chamberlin_Hall}{Chamberlin Hall}. By using a spark generator that will mark the tape at regular time intervals, we will be able to determine the positions of the marks (thus the displacement of the mass over time). We will then be able to use these data points to create a quadratic line of best fit. Taking the first constant of this equation and multiplying by 2, we will find the estimated value of gravity which we hypothesize to be $9.81 \si{m.s^{-2}}$. 
+
+\begin{equation}
+    \Delta y = \frac{g}{2}t^2
+    \label{eq:free-fall}
+\end{equation}
+
+
+\section{Procedure}
+\subsection{Equipment}
+%We will need the following pieces of equipment:
+\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \item Spark generator
+    \item Spark paper tape
+    \item Bob (weight)
+    %\item Non-streamlined bobs
+    \item Meter sticks
+    %\item Tape measure
+\end{itemize}
+
+\subsection{Steps}
+We will start by attaching the bob to the end of the spark paper tape so that they act as one system. Then, we will put the paper tape between the spark generator such that the bob is closer to the ground. As we turn the generator on, we will simultaneously drop the bob/tape system which will cause it to undergo free fall. As it does, spark marks will appear on the paper tape 60 times a second. As soon as the bob touches the ground, the system is no longer in free fall and the spark generator will be turned off. Then, the paper tape should be set out flat and straight so the distance between marks can be measured using the meter stick(s).
+
+
+\section{Results}
+
+\begin{center}
+    $$\includegraphics[width=.8\linewidth]{xvt.jpg}$$
+    \caption{Figure 1: Free Fall Position}
+    \label{fig:xvt}
+    
+    $$\includegraphics[width=\linewidth]{Vogel_Max_AudioPeaks.jpg}$$
+    \caption{Figure 2: Spark Audio Peeks}
+    \label{fig:peeks}
+    
+    $$\includegraphics[width=\linewidth]{peek-distribution.jpg}$$
+    \caption{Figure 3: Spark Interval Distribution}
+    \label{fig:distrib}
+\end{center}
+
+
+
+
+\section{Discussion \& Conclusion}
+\label{sec:Discussion}
+
+% Create a table
+\begin{wraptable}{r}{0.6\linewidth}
+    \centering
+    \begin{tabular}{|c|c|} 
+        \hline
+        Gravity & Error\\ 
+        \hline
+        $9.82\ \si{m.s^{-2}}$ & $\pm 0.02\ \si{m.s^{-2}} $\\ 
+        \hline
+    \end{tabular}
+    \caption{Our estimated gravity value and the standard error.}
+    \label{tab:gravity-std}
+\end{wraptable}
+
+Plotting the mark position versus the time it occurred, we can see via the first graph in ~\autoref{fig:xvt} that a line of best fit would be a quadratic equation. The intuitively makes sense given that the equation for vertical displacement of an object starting at rest (\autoref{eq:free-fall}) is also a quadratic equation.
+
+
+\noindent Using MATLAB to generate the line of best fit, we find that our estimated $g$ value is $9.82 \si{m.s^{-2}}$ with a standard error of $\pm 0.02 \si{m.s^{-2}}$. Given that our hypothesized value of $9.81  \si{m.s^{-2}}$ is included within our estimated value and one standard error, we can say that there is data to support our hypothesis of $g=9.81 \si{m.s^{-2}}$.
+
+\bigskip
+
+\noindent The slight difference between our found value of $g$ could be due to frequency of the spark generator not being truly $60$ Hz. By looking at the recording of the audio peeks caused by the spark generator (second graph in ~\autoref{fig:peeks}) that was not taken during the free-fall trial, we can take all note of all sounds that go above the arbitrary threshold of $0.45$ and plot the distribution of the time between events in a boxplot (third graph in ~\autoref{fig:distrib}). This figure shows us that while the majority of sparks had a period of $16.6 \si{m.s}$ between events (which makes since given that the  corresponding period for a frequency of 60Hz is $\frac{1}{60}$ or $0.01\overline{6} \si{s}$), there were four outlier-occurrences of events happening between $16.0-16.4 \si{m.s}$ and four occurrences of events happening between $17.0-17.2 \si{m.s}$. Because of this, it could be plausible that during the free fall trial some a portion of the marks could have happened later than expected which would have caused their to be a larger distance between marks ($\Delta y$), meaning that our estimated $g$ value would be larger than reality.
+
+\bigskip
+
+\noindent Because we only observed a single trial of free-fall motion, we cannot make any definite conclusions or extrapolate it to difference scenarios. If we were to re-run this trial, I would take a longer piece of paper tape so more marks could be made. Moreover, I would record the audio during the free-fall motion and reference the sound file for the $\Delta t$ between events instead of the assumed $0.1\overline{6}\ \si{m.s}$.
+
+
+
+
+\end{multicols}
+
+%\appendix   % Being labeling sections as appendices
+
+%\section{Appendix}
+
+%\begin{itemize}
+%    \item \href{https://canvas.wisc.edu/courses/223849/files/14572995/download?wrap=1}{Raw Data Files}
+%    \item \href{https://canvas.wisc.edu/files/14696751/download}{MATLAB Live Script}
+%\end{itemize}
+
+%\tableofcontents
+\end{document}

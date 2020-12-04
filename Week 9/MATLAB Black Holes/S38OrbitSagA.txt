@@ -1,0 +1,14 @@
+Table 2
+Summary of New AO Imaging Observations
+
+Date	Date	Frames	Frames	FWHM	Strehl	N_stars	K_lim^a
+	sigma_pos^b
+	
+(UT)	(Decimal)	Obtained	Used	(mas)			(mag)	(mas)	
+2012 Jul 24	2012.562	224	162	58	0.29	2344	19.6	0.06	
+2013 Apr 25-26	2013.318	268	140	67	0.17	1432	18.8	0.11	
+2013 Jul 20	2013.550	239	193	58	0.29	2492	19.6	0.08	
+
+Notes.
+a Klim is the magnitude at which the cumulative distribution function of the observed K magnitudes reaches 95% of the total sample size.
+b Positional error taken as error on the mean from the three subset images in each epoch and includes stars with K < 15 and with an average distance <4" from the black hole.

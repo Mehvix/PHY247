@@ -1,0 +1,5 @@
+To get the length of the string, I layed it out along a meter stick.
+
+"string_start" gives the position of one end of the string. This should be roughly 5cm
+
+"string_end" gives the other end of the string. It looks like it's located at 90cm, but it's actually more like 190cm. This is just a quirk in the labeling on this particular meter stick.

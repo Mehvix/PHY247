@@ -1,0 +1,15 @@
+Data taken using phyphox and my galaxy s10e.
+
+Used accelerometer, linear acceleration, gyroscope, and magnetometer. 
+
+Data colletion rate set as high as possible.
+
+Each folder contains data sets for a large initial angle and a small angle. Videos accompany each of these to give you an idea for what kind of an angle you're dealing with.
+
+My phone was taped up in the same spot for all of the data sets.
+
+Note that in the pictures for the length of the pendulum, the reading on top is really something like 170cm rather than 70cm.
+
+
+
+
